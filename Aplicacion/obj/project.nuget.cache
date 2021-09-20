@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "WiwAfog1KbcHSNWAHtjFLLv1OY6ZbB2slSObbfN2zxSC4w98AmAgD2oqxW0HwWcitR3ZmxEUc1CIS2dnxHSWYQ==",
+  "dgSpecHash": "tTcaK6Xj5UJm8hLFOk4EbAWYB+eAKxuY2Qp0fffOgLXQylS9sRuzi2smm8Ek/B2oYmzRBSgcH86FTv1gJ/q0lQ==",
   "success": true,
   "projectFilePath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Aguilar\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512",
+    "C:\\Users\\Aguilar\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.3\\fluentvalidation.aspnetcore.10.3.3.nupkg.sha512",
+    "C:\\Users\\Aguilar\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.3\\fluentvalidation.dependencyinjectionextensions.10.3.3.nupkg.sha512",
     "C:\\Users\\Aguilar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Aguilar\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Aguilar\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
