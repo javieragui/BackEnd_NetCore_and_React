@@ -1,0 +1,17 @@
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\bin\Debug\net5.0\Aplicacion.deps.json
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\bin\Debug\net5.0\Aplicacion.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\bin\Debug\net5.0\ref\Aplicacion.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\bin\Debug\net5.0\Aplicacion.pdb
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\bin\Debug\net5.0\Dominio.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\bin\Debug\net5.0\Persistencia.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\bin\Debug\net5.0\Dominio.pdb
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\bin\Debug\net5.0\Persistencia.pdb
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\Aplicacion.csproj.AssemblyReference.cache
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\Aplicacion.AssemblyInfoInputs.cache
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\Aplicacion.AssemblyInfo.cs
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\Aplicacion.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\Aplicacion.csproj.CopyComplete
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\Aplicacion.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\ref\Aplicacion.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Aplicacion\obj\Debug\net5.0\Aplicacion.pdb

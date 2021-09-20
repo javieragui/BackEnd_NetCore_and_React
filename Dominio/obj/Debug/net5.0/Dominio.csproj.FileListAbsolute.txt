@@ -1,0 +1,12 @@
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\bin\Debug\net5.0\Dominio.deps.json
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\bin\Debug\net5.0\Dominio.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\bin\Debug\net5.0\ref\Dominio.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\bin\Debug\net5.0\Dominio.pdb
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\obj\Debug\net5.0\Dominio.csproj.AssemblyReference.cache
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\obj\Debug\net5.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\obj\Debug\net5.0\Dominio.AssemblyInfoInputs.cache
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\obj\Debug\net5.0\Dominio.AssemblyInfo.cs
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\obj\Debug\net5.0\Dominio.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\obj\Debug\net5.0\Dominio.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\obj\Debug\net5.0\ref\Dominio.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\Dominio\obj\Debug\net5.0\Dominio.pdb
