@@ -12,6 +12,7 @@ namespace WebAPI.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<ManejadorErrorMiddleware> _logger;
+        
         public ManejadorErrorMiddleware(RequestDelegate next, ILogger<ManejadorErrorMiddleware> logger)
         {
             this._next = next;
@@ -29,7 +30,6 @@ namespace WebAPI.Middleware
                 await ManejadorExcepcionAsincrona(context, ex, _logger);
             }
         }
-
         private async Task ManejadorExcepcionAsincrona(HttpContext context, Exception ex, ILogger<ManejadorErrorMiddleware> logger)
         {
             object errores = null;
