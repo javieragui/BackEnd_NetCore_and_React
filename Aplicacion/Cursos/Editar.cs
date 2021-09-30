@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System;
 using System.Net;
 using System.Threading;
@@ -6,6 +7,8 @@ using Aplicacion.ManejadorError;
 using FluentValidation;
 using MediatR;
 using Persistencia;
+using System.Linq;
+using Dominio;
 
 namespace Aplicacion.Cursos
 {
@@ -13,10 +16,13 @@ namespace Aplicacion.Cursos
     {
         public class Ejecuta : IRequest
         {
-            public int CursoId { get; set; }
+            public Guid CursoId { get; set; }
             public string Titulo { get; set; }
             public string Descripcion { get; set; }
             public DateTime? FechaPublicacion { get; set; }
+            public List<Guid> ListaInstructor { get; set; }
+            public decimal? Precio { get; set; }
+            public decimal? Promocion { get; set; }
         }
 
         public class EjecutaValidacion : AbstractValidator<Ejecuta>
@@ -46,6 +52,49 @@ namespace Aplicacion.Cursos
                 curso.Titulo = request.Titulo ?? curso.Titulo;
                 curso.Descripcion = request.Descripcion ?? curso.Descripcion;
                 curso.FechaPublicacion = request.FechaPublicacion ?? curso.FechaPublicacion;
+
+                //Actualizar el precio del curso
+                var precioEntidad = _context.Precio.Where(x => x.CursoId == curso.CursoId).FirstOrDefault();
+                if(precioEntidad != null)
+                {
+                    precioEntidad.Promocion = request.Promocion ?? precioEntidad.Promocion;
+                    precioEntidad.PrecioActual = request.Precio ?? precioEntidad.PrecioActual;
+                }
+                else
+                {
+                    precioEntidad = new Precio
+                    {
+                        PrecioId = new Guid(),
+                        PrecioActual = request.Precio ?? 0,
+                        Promocion = request.Promocion ?? 0,
+                        CursoId = curso.CursoId
+                    };
+                    await _context.Precio.AddAsync(precioEntidad);
+                }
+
+                if(request.ListaInstructor != null)
+                {
+                    if(request.ListaInstructor.Count > 0)
+                    {
+                        //Eliminar instructores actuales en la bbdd
+                        var instructoresDB = _context.CursoInstructor.Where(x => x.CursoId == request.CursoId);
+                        foreach (var instructorEliminar in instructoresDB)
+                        {
+                            _context.CursoInstructor.Remove(instructorEliminar);
+                        }
+                        //Fin del procedimiento para eliminar instructores
+                        //Procedimiento para agregar instructores que vienen del cliente
+                        foreach (var id in request.ListaInstructor)
+                        {
+                            var nuevoInstructor = new CursoInstructor
+                            {
+                                CursoId = request.CursoId,
+                                InstructorId = id
+                            };
+                            _context.CursoInstructor.Add(nuevoInstructor);
+                        }
+                    }
+                }
 
                 var resultado = await _context.SaveChangesAsync();
                 if(resultado > 0)

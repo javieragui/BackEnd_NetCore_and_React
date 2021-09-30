@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3O1+0j7WJiQgJPF5Og7Dk6QreqlqkThtxfbCUM1hwFrumT2WF0vdat34pp/TAMzCjOy4gjar1+59zTyA8DeRJw==",
+  "dgSpecHash": "jxAwX2CLszT7OWqe9yE4O9WxR8E0SOMMtoBjoW8KpyDP0yNfvRKn+g/94pOvEhspFHIctMkfzQ85ML6k6HpzuA==",
   "success": true,
   "projectFilePath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Aguilar\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\Aguilar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Aguilar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.3\\microsoft.aspnetcore.cryptography.internal.5.0.3.nupkg.sha512",
     "C:\\Users\\Aguilar\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.3\\microsoft.aspnetcore.cryptography.keyderivation.5.0.3.nupkg.sha512",

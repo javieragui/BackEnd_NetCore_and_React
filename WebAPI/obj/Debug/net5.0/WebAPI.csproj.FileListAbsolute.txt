@@ -78,3 +78,6 @@ C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net
 C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\Seguridad.dll
 C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\Seguridad.pdb
 C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\AutoMapper.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\Dapper.dll
