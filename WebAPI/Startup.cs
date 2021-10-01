@@ -65,7 +65,8 @@ namespace WebAPI
             }).AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Nuevo>());
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI Servicios para mantenimiento", Version = "v1" });
+                c.CustomSchemaIds(c => c.FullName);
             });
             services.TryAddSingleton<ISystemClock, SystemClock>();
 
@@ -96,6 +97,7 @@ namespace WebAPI
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseMiddleware<ManejadorErrorMiddleware>();
+            //Agregar metodos Swagger que ya vienen agregados
             if (env.IsDevelopment())
             {
                 //app.UseDeveloperExceptionPage();
