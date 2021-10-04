@@ -31,6 +31,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Seguridad;
 using Persistencia.DapperConexion;
 using Persistencia.DapperConexion.Instructor;
+using Persistencia.DapperConexion.Paginacion;
 
 namespace WebAPI
 {
@@ -89,6 +90,7 @@ namespace WebAPI
             //Arrancar mi interfaz Drapper(IFactoryConnection) para crear la conexión
             services.AddTransient<IFactoryConnection, FactoryConnection>();
             services.AddScoped<IInstructor, InstructorRepository>();
+            services.AddScoped<IPaginacion, PaginacionRepository>();
 
             services.AddOptions();
         }
