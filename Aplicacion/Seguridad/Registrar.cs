@@ -76,16 +76,8 @@ namespace Aplicacion.Seguridad
                     NombreCompleto = usuario.NombreCompleto,
                     Email = usuario.Email,
                     Username = usuario.UserName,
-                    Token = _jwtGenerador.CrearToken(usuario)
+                    Token = _jwtGenerador.CrearToken(usuario, null)
                 } : throw new Exception("No se pudo agregar al nuevo usuario");
-                /*if(resultado.Succeeded)
-                {
-                    return Unit.Value;
-                }
-                else
-                {
-                    throw new Exception("No se pudo agregar al nuevo usuario");
-                }*/
             }
         }
     }

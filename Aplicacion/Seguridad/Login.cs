@@ -8,6 +8,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Aplicacion.Contratos;
+using System.Collections.Generic;
 
 namespace Aplicacion.Seguridad
 {
@@ -47,12 +48,13 @@ namespace Aplicacion.Seguridad
                     throw new ManejadorExcepcion(HttpStatusCode.Unauthorized);
                 }
                 var resultado = await _signInManager.CheckPasswordSignInAsync(usuario, request.Password, false);
+                var listarRoles = await _userManager.GetRolesAsync(usuario);
                 if(resultado.Succeeded)
                 {
                     return new UsuarioData 
                     {
                         NombreCompleto = usuario.NombreCompleto,
-                        Token = _jwtGenerador.CrearToken(usuario),
+                        Token = _jwtGenerador.CrearToken(usuario, new List<string>(listarRoles)),
                         Username = usuario.UserName,
                         Email = usuario.Email,
                         Imagen = null

@@ -22,6 +22,7 @@ namespace Aplicacion.Cursos
             {
                 this._paginacion = paginacion;
             }
+            
             public async Task<PaginacionModel> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 var storeProcedure = "usp_obtener_paginacion";
