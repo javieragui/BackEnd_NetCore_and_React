@@ -26,13 +26,13 @@ namespace Aplicacion.Comentarios
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 var comentario = await _context.Comentario.FindAsync(request.Id);
-                if(comentario == null)
+                if (comentario == null)
                 {
-                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "No se encontro el comentario"});
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se encontro el comentario" });
                 }
                 _context.Remove(comentario);
                 var resultado = await _context.SaveChangesAsync();
-                if(resultado > 0)
+                if (resultado > 0)
                 {
                     return Unit.Value;
                 }
