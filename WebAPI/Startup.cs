@@ -1,3 +1,6 @@
+using System.Collections.Immutable;
+using System.Reflection;
+using System.Net.Security;
 using System.Text;
 using System;
 using System.Collections.Generic;
@@ -47,6 +50,10 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Permite consumir cualquier endPoint de cualquier cliente
+            services.AddCors(o => o.AddPolicy("corsApp", builder => {
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            }));
             var builder = services.AddIdentityCore<Usuario>();
             var identityBuilder = new IdentityBuilder(builder.UserType, builder.Services);
             //Añadir Roles-> Instanciar servicio RoleManager
@@ -102,6 +109,7 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("corsApp");
             app.UseMiddleware<ManejadorErrorMiddleware>();
             //Agregar metodos Swagger que ya vienen agregados
             if (env.IsDevelopment())
