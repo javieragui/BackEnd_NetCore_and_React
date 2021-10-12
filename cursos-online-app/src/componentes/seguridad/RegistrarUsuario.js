@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Container, Grid, TextField, Typography } from '@mui/material'
 import style from '../Tool/Style'
+import { registrarUsuario } from '../../actions/UsuarioAction';
 
 const RegistrarUsuario = () => {
     const [usuario, setUsuario] = useState({
@@ -17,9 +18,12 @@ const ingresarValoresMemoria = e => {
         [name] : value
     }))
 }
-const registrarUsuario = e => {
+const registrarUsuarioBoton = e => {
     e.preventDefault();
-    console.log('Imprime los valores de usuario ', usuario);
+    registrarUsuario(usuario).then(response => {
+        console.log('se registro con exito el usuario ', response);
+        window.localStorage.setItem("token_seguridad", response.data.token)
+    })
 }
 
     return(
@@ -48,7 +52,7 @@ const registrarUsuario = e => {
                     </Grid>
                     <Grid container justifyContent="center">
                         <Grid item xs={12} md={6} lg={6}>
-                            <Button type="submit" onClick={registrarUsuario} fullWidth variant="contained" color="primary" size="large" style={style.submit}>Enviar</Button>
+                            <Button type="submit" onClick={registrarUsuarioBoton} fullWidth variant="contained" color="primary" size="large" style={style.submit}>Enviar</Button>
                         </Grid>
                     </Grid>
                 </form>

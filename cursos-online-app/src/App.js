@@ -8,7 +8,7 @@ import PerfilUsuario from "./componentes/seguridad/PerfilUsuario";
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <RegistrarUsuario />
+            <Login />
         </ThemeProvider>
     )
 }
