@@ -3,8 +3,12 @@ import React, { useState } from 'react';
 import style from '../Tool/Style'
 import LockIcon from '@mui/icons-material/Lock';
 import { loginUsuario } from '../../actions/UsuarioAction';
+import { useStateValue } from '../../contexto/store';
+import { withRouter } from "react-router-dom";
 
-const Login = () => {
+const Login = (props) => {
+    const [{ usuarioSesion }, dispatch] = useStateValue();
+
     const [usuario, setUsuario] = useState({
         Email : '',
         Password : ''
@@ -18,9 +22,23 @@ const Login = () => {
     }
     const loginUsuarioBoton = e => {
         e.preventDefault()
-        loginUsuario(usuario).then(response => {
-            console.log('Login exitoso', response);
-            window.localStorage.setItem('token_seguridad', response.data.token);
+        console.log('Login Usuario', usuario);
+        loginUsuario(usuario, dispatch).then(response => {
+            //console.log('response.data.token', response.data.token);
+            if(response.status === 200) {
+                console.log('Login exitoso', response);
+                window.localStorage.setItem('token_seguridad', response.data.token);
+                props.history.push("/");
+                
+            } else {
+                dispatch({
+                    type : "OPEN_SNACKBAR",
+                    openMensaje : {
+                        open : true,
+                        mensaje : "Las credenciales del usuario son incorrectas"
+                    }
+                })
+            }
         })
     }
     return (
@@ -33,7 +51,7 @@ const Login = () => {
                     Login de usuario
                 </Typography>
                 <form style={style.form}>
-                    <TextField name="Email" value={usuario.Email} onChange={ingresarValoresMemoria} variant="outlined" label="Ingrese username" fullWidth margin="normal"/>
+                    <TextField name="Email" value={usuario.Email} onChange={ingresarValoresMemoria} variant="outlined" label="Ingrese Email" fullWidth margin="normal"/>
                     <TextField name="Password" value={usuario.Password} onChange={ingresarValoresMemoria} variant="outlined" type="password" label="password" fullWidth margin="normal"/>
                     <Button type="submit" onClick={loginUsuarioBoton} fullWidth variant="contained" color="primary" style={style.submit} >
                         Enviar
@@ -44,4 +62,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default withRouter(Login);

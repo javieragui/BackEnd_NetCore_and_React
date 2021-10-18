@@ -1,37 +1,60 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Button, Container, Grid, TextField, Typography, Avatar } from '@mui/material';
 import style from '../Tool/Style'
 import { actualizarUsuario, obtenerUsuarioActual } from '../../actions/UsuarioAction';
+import { useStateValue } from '../../contexto/store';
 
 const PerfilUsuario = () => {
+    const [{ sesionUsuario }, dispatch] = useStateValue();
     const [usuario, setUsuario] = useState({
-        nombreCompleto : '',
-        email : '',
-        password : '',
-        confirmPassword : '',
-        username : ''
-    })
-    const ingresarValoresMemoria = e => {
-        const {name, value} = e.target;
-        setUsuario(anterior => ({
-            ...anterior,
-            [name] : value
-        }))
-    }
+      nombreCompleto: "",
+      email: "",
+      password: "",
+      confirmarPassword: "",
+      username: "",
+      imagenPerfil: null
+    });
+  
+    const ingresarValoresMemoria = (e) => {
+      const { name, value } = e.target;
+      setUsuario((anterior) => ({
+        ...anterior,
+        [name]: value,
+      }));
+    };
+  
     useEffect(() => {
-        obtenerUsuarioActual().then(response => {
-            console.log('Esta es la data el objeto response del user actual', response);
-            setUsuario(response.data);
-        })
-    }, [])
-    const guardarUsuario = e => {
+      //setUsuario(sesionUsuario.usuario);
+      console.log("Probando USUARIO"+usuario);
+      setUsuario((anterior) => ({
+        ...anterior
+        
+      }));
+      
+    }, []);
+    const guardarUsuario = (e) => {
         e.preventDefault();
-        actualizarUsuario(usuario).then(response => {
-            console.log('Se actualizo el usuario', usuario)
-            window.localStorage.setItem("token_seguridad", response.data.token);
+        actualizarUsuario(usuario, dispatch).then((response) => {
+            if(response.status === 200){
+                dispatch({
+                    type : "OPEN_SNACKBAR",
+                    openMensaje : {
+                        open : true,
+                        mensaje : "Se guardaron con exito los cambios de Perfil Usuario"
+                    }
+                })
+                window.localStorage.setItem("token_seguridad", response.data.token);
+            } else {
+                dispatch({
+                    type : "OPEN_SNACKBAR",
+                    openMensaje : {
+                        open : true,
+                        mensaje : "Errores al intentar guardar en : " + Object.keys(response.data.errors)
+                    }
+                })
+            }
         })
     }
-
     return (
         <Container component="main" maxWidth="md" justify="center">
             <div style={style.paper}>
