@@ -14,7 +14,7 @@ export const registrarUsuario = (usuario) => {
 };
 export const obtenerUsuarioActual = (dispatch) => {
     return new Promise((resolve, eject) => {
-        HttpCliente.get("/usuario").then(response => {
+        HttpCliente.get("/usuario").then((response) => {
             console.log("response", response);
             dispatch({
                 type: "INICIAR_SESION",
@@ -62,5 +62,6 @@ export const loginUsuario = (usuario, dispatch) => {
         .catch((error) => {
             resolve(error.response);
         });
+        resolve(usuario);
     });
 };

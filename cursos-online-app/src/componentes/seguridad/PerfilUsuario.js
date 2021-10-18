@@ -24,7 +24,7 @@ const PerfilUsuario = () => {
     };
   
     useEffect(() => {
-      //setUsuario(sesionUsuario.usuario);
+      setUsuario(sesionUsuario.usuario);
       console.log("Probando USUARIO"+usuario);
       setUsuario((anterior) => ({
         ...anterior
