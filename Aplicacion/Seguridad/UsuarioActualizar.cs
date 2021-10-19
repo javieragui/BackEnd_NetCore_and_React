@@ -1,3 +1,8 @@
+using System.Runtime.InteropServices;
+using System.Net.Http;
+using System.Net.Cache;
+using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +28,7 @@ namespace Aplicacion.Seguridad
             public string Email { get; set; }
             public string Password { get; set; }
             public string Username { get; set; }
+            public ImagenGeneral ImagenPerfil { get; set; }
         }
 
         public class EjecutaValidador : AbstractValidator<Ejecuta>
@@ -62,11 +68,45 @@ namespace Aplicacion.Seguridad
                 {
                     throw new ManejadorExcepcion(HttpStatusCode.InternalServerError, new {mensaje = " Este email o usuario ya existe"});
                 }
+                if(request.ImagenPerfil != null)
+                {
+                    var resultadoImagen = await _context.Documento.Where(x => x.ObjetoReferencia == new Guid(usuarioIden.Id)).FirstOrDefaultAsync();
+                    if(resultadoImagen == null)
+                    {
+                        var imagen = new Documento
+                        {
+                            Contenido = System.Convert.FromBase64String(request.ImagenPerfil.Data),
+                            Nombre = request.ImagenPerfil.Nombre,
+                            Extension = request.ImagenPerfil.Extension,
+                            ObjetoReferencia = new Guid(usuarioIden.Id),
+                            DocumentoId = Guid.NewGuid(),
+                            FechaCreacion = DateTime.UtcNow
+                        };
+                        _context.Documento.Add(imagen);
+                    }
+                    else
+                    {
+                        resultadoImagen.Contenido = Convert.FromBase64String(request.ImagenPerfil.Data);
+                        resultadoImagen.Nombre = request.ImagenPerfil.Nombre;
+                        resultadoImagen.Extension = request.ImagenPerfil.Extension;
+                    }
+                }
                 usuarioIden.NombreCompleto = $"{request.NombreCompleto}";
                 usuarioIden.PasswordHash = _passwordHasher.HashPassword(usuarioIden, request.Password);
                 usuarioIden.Email = request.Email;
                 var resultadoUpdate = await _userManager.UpdateAsync(usuarioIden);
                 var resultadoRoles = await _userManager.GetRolesAsync(usuarioIden);
+                var imagenPerfil = await _context.Documento.Where(x => x.ObjetoReferencia == new Guid(usuarioIden.Id)).FirstAsync();
+                ImagenGeneral imagenGeneral = null;
+                if(imagenPerfil != null)
+                {
+                    imagenGeneral = new ImagenGeneral
+                    {
+                        Data = Convert.ToBase64String(imagenPerfil.Contenido),
+                        Nombre = imagenPerfil.Nombre,
+                        Extension = imagenPerfil.Extension
+                    };
+                }
                 if(resultadoUpdate.Succeeded)
                 {
                     return new UsuarioData
@@ -74,7 +114,8 @@ namespace Aplicacion.Seguridad
                         NombreCompleto = usuarioIden.NombreCompleto,
                         Username = usuarioIden.UserName,
                         Email = usuarioIden.Email,
-                        Token = _jwtGenerador.CrearToken(usuarioIden, new List<string>(resultadoRoles))
+                        Token = _jwtGenerador.CrearToken(usuarioIden, new List<string>(resultadoRoles)),
+                        ImagenPerfil = imagenGeneral
                     };
                 }
                 throw new Exception("No se pudo actualizar el usuario");
