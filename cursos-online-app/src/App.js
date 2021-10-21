@@ -4,14 +4,15 @@ import theme from "./theme/theme";
 import RegistrarUsuario from "./componentes/seguridad/RegistrarUsuario";
 import Login from "./componentes/seguridad/Login";
 import PerfilUsuario from "./componentes/seguridad/PerfilUsuario";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import { Grid, Snackbar } from "@mui/material";
 import AppNavBar from "./componentes/navegacion/AppNavBar";
 import { useStateValue } from "./contexto/store";
 import { obtenerUsuarioActual } from "./actions/UsuarioAction";
+import RutaSegura from "./componentes/navegacion/RutaSegura";
 
 function App() {
-    const [{sesionUsuario, openSnackBar}, dispatch] = useStateValue();
+    const [{openSnackBar}, dispatch] = useStateValue();
     const [iniciaApp, setIniciaApp] = useState(false);
     useEffect(() => {
         if(!iniciaApp){
@@ -23,7 +24,7 @@ function App() {
             })
         }
     }, [iniciaApp]);
-    return (
+    return iniciaApp === false ? null : (
         <React.Fragment>
             <Snackbar anchorOrigin={{ vertical:"bottom", horizontal:"center" }}
                 open={openSnackBar ? openSnackBar.open : false}
@@ -48,8 +49,8 @@ function App() {
                         <Switch>
                             <Route exact path="/auth/login" component={Login} />
                             <Route exact path="/auth/registrar" component={RegistrarUsuario} />
-                            <Route exact path="/auth/perfil" component={PerfilUsuario} />
-                            <Route exact path="/" component={PerfilUsuario} />
+                            <RutaSegura exact path="/auth/perfil" component = {PerfilUsuario} />
+                            <RutaSegura exact path="/" component = {PerfilUsuario} />
                         </Switch>
                     </Grid>
                 </ThemeProvider>

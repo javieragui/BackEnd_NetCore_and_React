@@ -9,10 +9,8 @@ export const initialState = {
 };
 
 const sesionUsuarioReducer = (state = initialState, action) => {
-    //console.log("ACTION EN SESIONUSUARIOREDUCER ", action, ' Y el STATE' , state);
     switch (action.type) {
         case "INICIAR_SESION":
-            console.log(action);
             return {
                 ...state,
                 usuario: action.sesion,

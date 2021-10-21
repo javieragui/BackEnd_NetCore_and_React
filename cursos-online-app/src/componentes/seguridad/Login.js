@@ -22,14 +22,10 @@ const Login = (props) => {
     }
     const loginUsuarioBoton = e => {
         e.preventDefault()
-        console.log('Login Usuario', usuario);
         loginUsuario(usuario, dispatch).then(response => {
-            //console.log('response.data.token', response.data.token);
             if(response.status === 200) {
-                console.log('Login exitoso', response);
                 window.localStorage.setItem('token_seguridad', response.data.token);
                 props.history.push("/");
-                
             } else {
                 dispatch({
                     type : "OPEN_SNACKBAR",
