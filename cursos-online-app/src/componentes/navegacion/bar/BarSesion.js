@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Avatar, IconButton,  Toolbar, Typography, Button, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { Avatar, IconButton,  Toolbar, Typography, Button, Drawer } from '@mui/material';
 import FotoUsuarioTemp from "../../../logo.svg";
 import { makeStyles } from '@mui/styles';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useStateValue } from '../../../contexto/store';
 import { MenuIzquierda } from './MenuIzquierda';
 import { MenuDerecha } from './MenuDerecha';

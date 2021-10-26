@@ -4,15 +4,17 @@ import theme from "./theme/theme";
 import RegistrarUsuario from "./componentes/seguridad/RegistrarUsuario";
 import Login from "./componentes/seguridad/Login";
 import PerfilUsuario from "./componentes/seguridad/PerfilUsuario";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Grid, Snackbar } from "@mui/material";
 import AppNavBar from "./componentes/navegacion/AppNavBar";
 import { useStateValue } from "./contexto/store";
 import { obtenerUsuarioActual } from "./actions/UsuarioAction";
 import RutaSegura from "./componentes/navegacion/RutaSegura";
+import NuevoCurso from "./componentes/cursos/NuevoCurso";
+import PaginadorCurso from "./componentes/cursos/PaginadorCurso";
 
 function App() {
-    const [{openSnackBar}, dispatch] = useStateValue();
+    const [{ openSnackbar }, dispatch] = useStateValue();
     const [iniciaApp, setIniciaApp] = useState(false);
     useEffect(() => {
         if(!iniciaApp){
@@ -27,10 +29,10 @@ function App() {
     return iniciaApp === false ? null : (
         <React.Fragment>
             <Snackbar anchorOrigin={{ vertical:"bottom", horizontal:"center" }}
-                open={openSnackBar ? openSnackBar.open : false}
+                open={openSnackbar ? openSnackbar.open : false}
                 autoHideDuration={3000} ContentProps={{"aria-describedby" : "message-id"}}
                 message = {
-                    <span id="message-id">{openSnackBar ? openSnackBar.mensaje : ""}</span>
+                    <span id="message-id">{openSnackbar ? openSnackbar.mensaje : ""}</span>
                 }
                 onClose = { () => 
                     dispatch({
@@ -51,6 +53,8 @@ function App() {
                             <Route exact path="/auth/registrar" component={RegistrarUsuario} />
                             <RutaSegura exact path="/auth/perfil" component = {PerfilUsuario} />
                             <RutaSegura exact path="/" component = {PerfilUsuario} />
+                            <RutaSegura exact path="/curso/nuevo" component={NuevoCurso} />
+                            <RutaSegura exact path="/curso/paginador" component={PaginadorCurso} />
                         </Switch>
                     </Grid>
                 </ThemeProvider>

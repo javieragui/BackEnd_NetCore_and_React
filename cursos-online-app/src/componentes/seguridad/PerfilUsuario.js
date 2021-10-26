@@ -80,7 +80,7 @@ const PerfilUsuario = () => {
     };
     const fotoKey = uuidv4();
     return (
-        <Container component="main" maxWidth="md" justify="center">
+        <Container component="main" justify="center">
             <div style={style.paper}>
                 <Avatar
                     style={style.avatar}

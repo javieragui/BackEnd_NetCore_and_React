@@ -58,6 +58,7 @@ export const actualizarUsuario = (usuario, dispatch) => {
 
 export const loginUsuario = (usuario, dispatch) => {
     return new Promise((resolve, eject) => {
+        console.log('USUARIO',usuario);
         instancia.post("/usuario/login", usuario).then(response => {
             if(response.data && response.data.imagenPerfil) {
                 let fotoPerfil = response.data.imagenPerfil;
