@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj": {}
+    "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj": {}
   },
   "projects": {
-    "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+    "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
         "projectName": "Aplicacion",
-        "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
+        "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
         "packagesPath": "C:\\Users\\Aguilar\\.nuget\\packages\\",
-        "outputPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\obj\\",
+        "outputPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,11 +31,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj": {
-                "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj"
+              "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj"
               },
-              "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
-                "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj"
+              "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
+                "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj": {
+    "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\Aguilar\\.nuget\\packages\\",
-        "outputPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\obj\\",
+        "outputPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -155,14 +155,14 @@
         }
       }
     },
-    "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
+    "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj",
+        "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\Persistencia.csproj",
         "packagesPath": "C:\\Users\\Aguilar\\.nuget\\packages\\",
-        "outputPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\obj\\",
+        "outputPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -182,8 +182,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj": {
-                "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj"
+              "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -237,14 +237,14 @@
         }
       }
     },
-    "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
+    "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj",
         "projectName": "Seguridad",
-        "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj",
+        "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj",
         "packagesPath": "C:\\Users\\Aguilar\\.nuget\\packages\\",
-        "outputPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\obj\\",
+        "outputPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -264,8 +264,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
-                "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
+              "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+                "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
               }
             }
           }

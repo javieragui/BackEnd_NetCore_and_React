@@ -81,3 +81,8 @@ C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net
 C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\AutoMapper.dll
 C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\Dapper.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\iTextSharp.LGPLv2.Core.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\System.Drawing.Common.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\xampp\htdocs\CSharp\Curso Udemy ASP + React\ProyectoCore\WebAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

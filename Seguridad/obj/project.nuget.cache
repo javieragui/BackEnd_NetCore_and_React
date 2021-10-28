@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CWPtIaf7pk2KpjrlPdUWyYuUJAs2TsFc9MuG5h2s+dC9uT2WWNiYhzZYeZlbuyTm3AOoiMnCIIW/J0KFmshJGA==",
+  "dgSpecHash": "U+2UOUVV+JKrpseiLrPNIkcn0a22nbrxKpMWh1ov3lpQD88nDaFWp/JFoKhuys+2ADQYstqgVs7wuaDTMXDHig==",
   "success": true,
-  "projectFilePath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj",
+  "projectFilePath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aguilar\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Aguilar\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

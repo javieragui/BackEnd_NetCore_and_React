@@ -7332,11 +7332,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Aguilar\\.nuget\\packages\\",
-      "outputPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\WebAPI\\obj\\",
+      "outputPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7356,11 +7356,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
-              "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
+            "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+              "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
             },
-            "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
-              "projectPath": "c:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj"
+            "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
+              "projectPath": "C:\\xampp\\htdocs\\CSharp\\Curso Udemy ASP + React\\ProyectoCore\\Seguridad\\Seguridad.csproj"
             }
           }
         }
